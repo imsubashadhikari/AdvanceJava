@@ -1,0 +1,40 @@
+package LayoutManagement;
+
+import javax.swing.*; //import all classes from java
+
+
+public class NoLayoutDemo extends JFrame{
+	JLabel reg, fnlbl, lnlbl, emaillbl, aboutlbl;
+	public NoLayoutDemo() {
+		super("No Layout");
+		setLayout(null);
+		//JLabels
+		setSize(300,400);
+		JTextField fntxt, lntxt, emailtxt;
+		JTextArea abouttxt;
+		JButton submit;
+		
+		
+		reg = new JLabel("Registration Form");
+		reg.setBounds(50,10,200,20);
+		add(reg); //added at 50,20 position if JFrame
+		
+		fnlbl = new JLabel("First Name");
+		flbl.setBounds(10,40,100,20);
+		lnlbl = new JLabel("Last Name");
+		emaillbl = new JLabel("Email");
+		aboutlbl =new JLabel("About");
+		
+		//JTextFields
+		fntxt = new JTextField(20);
+		lntxt = new JTextField(20);
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

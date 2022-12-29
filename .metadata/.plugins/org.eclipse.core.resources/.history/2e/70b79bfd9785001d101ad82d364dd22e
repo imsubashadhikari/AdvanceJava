@@ -1,0 +1,37 @@
+package TextComponentPackage;
+
+import java.awt.FlowLayout;
+
+import javax.swing.*;
+
+public class TextComponents extends JFrame {
+	JLabel label;
+	JTextField text;
+	JTextArea area;
+	JPasswordField pass;
+	
+	public TextComponents() {
+		label = new JLabel();
+		label.setText("USer Info");
+		text = new JTextField(20);
+		area = new JTextArea(4,20);
+		pass = new JPasswordField(20);
+		
+		setTitle("Text Components");
+		setLayout(new FlowLayout());
+		setSize(300,300);
+		
+		add(label);
+		add(text);
+		add(pass);
+		add(area);
+		
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package LayoutManagement;
+
+import java.awt.GridBagConstraints;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class GridBagLayout extends JPanel {
+	JButton b1, b2, b3, b4, b5;
+	GridBagConstraints gbc;
+	
+	public GridBagLayoutDemo() {
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,47 @@
+package choiceComponent;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JToolBar;
+
+public class ToolBarDemo extends JFrame{
+	JPanel panel;
+	JToolBar bar;
+	
+	public ToolBarDemo() {
+		setTitle("Toolbar Frame");
+		setSize(300,400);
+		
+		panel = new JPanel();
+		add(panel);
+		
+		//set action
+		Action runaction = new AbstractAction("Run", new ImageIcon(getClass().getResource("run.png"))) {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				panel.setBackground(Color.GREEN);
+			}
+		};
+		
+		JToolBar bar = new JToolBar();
+		bar.add(runaction);
+		add(bar,BorderLayout.NORTH);//bar added to JFrame in north
+		
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
+	public static void main(String[] args) {
+		new ToolBarDemo();
+	}
+
+}
+Write to जर्घा डि अनुज

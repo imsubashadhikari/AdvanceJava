@@ -1,0 +1,35 @@
+package choiceComponent;
+
+import java.awt.FlowLayout;
+
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+public class JSliderDemo extends JFrame{
+	JSlider slider;
+	ChangeListener listener;
+	JTextField valuetxt;
+	
+
+	public JSliderDemo() {
+		setTitle("Slider Frame");
+		setSize(400,400);
+		setLayout(new FlowLayout(FlowLayout.LEFT));
+		valuetxt = new JTextField(20);
+		listener = new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				JSlider source = (JSlider) e.getSource();
+				valuetxt.setText(String.valueOf(source.getValue()));
+			}
+		};
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

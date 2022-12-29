@@ -1,0 +1,9 @@
+package choiceComponent;
+
+public class ToolBarDemo {
+
+	public ToolBarDemo() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

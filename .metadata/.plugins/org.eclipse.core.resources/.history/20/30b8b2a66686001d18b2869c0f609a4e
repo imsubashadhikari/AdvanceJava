@@ -1,0 +1,19 @@
+package choiceComponent;
+
+import javax.swing.*;
+
+public class JSliderDemo extends JFrame{
+	JSlider slider;
+	JTextField valuetxt;
+	
+
+	public JSliderDemo() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

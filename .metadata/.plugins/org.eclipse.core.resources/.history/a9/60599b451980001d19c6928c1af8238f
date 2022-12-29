@@ -1,0 +1,17 @@
+import java.awt.Frame;
+
+public class ConceptOfContainerAndComponent {
+	Frame frame; //object frame created in memory
+	public ConceptOfContainerAndComponent() {
+		frame = new Frame(); //container-main window
+		frame.setSize(300,300);//width and height
+		frame.setVisible(true);	// showing frame above screen
+	}
+
+	public static void main(String[] args) {
+		new ConceptOfContainerAndComponent(); //constructor called
+		// TODO Auto-generated method stub
+
+	}
+
+}

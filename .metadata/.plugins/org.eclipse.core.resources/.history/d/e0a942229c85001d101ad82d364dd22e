@@ -1,0 +1,21 @@
+package TextComponentPackage;
+
+import javax.swing.*;
+
+public class ChoiceComponents extends JFrame{
+	JCheckBox box1, box2;
+	JRadioButton male, female, notspecified;
+
+	public ChoiceComponents() {
+		setTitle("Choice Frame");
+		setSize(400,400);
+		setLayout(new Gridlayout(3,2,5,5));
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

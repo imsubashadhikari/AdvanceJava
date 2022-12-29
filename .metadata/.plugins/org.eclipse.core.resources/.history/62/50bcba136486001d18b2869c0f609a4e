@@ -1,0 +1,46 @@
+package choiceComponent;
+
+import javax.swing.*;
+//import java.awt;
+
+
+public class JMenuDemo extends JFrame{
+	JMenuBar bar;
+	JMenu file,edit,view;
+	JMenuItem save, open, exit;
+	JCheckBoxMenuItem status;
+
+	public JMenuDemo() {
+		bar = new JMenuBar();
+		file = new JMenu("FILE");
+		edit = new JMenu("EDIT");
+		view = new JMenu("View");
+		save= new JMenuItem("Open");
+		exit = new JMenuItem("Exit");
+		status = new JCheckBoxMenuItem("Status");
+		status.setSelected(true);
+		
+		bar.add(file);
+		bar.add(edit);
+		bar.add(view);
+		
+		file.add(save);
+		file.add(open);
+		edit.add(exit);
+		view.add(status);
+		
+		setJMenuBar(bar); //it attaches JMenuBar in JFrame;
+		setTitle("Menu Frame");
+		setSize(300,300);
+		setVisible(true);
+		
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		new JMenuDemo();
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,52 @@
+package choiceComponent;
+
+import java.awt.Component;
+import java.awt.FlowLayout;
+import java.util.Hashtable;
+
+import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+
+public class JSliderDemo extends JFrame{
+	JSlider slider;
+	ChangeListener listener;
+	JTextField valuetxt;
+	
+
+	public JSliderDemo() {
+		setTitle("Slider Frame");
+		setSize(400,400);
+		setLayout(new FlowLayout(FlowLayout.LEFT));
+		valuetxt = new JTextField(20);
+		listener = new ChangeListener() {
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				JSlider source = (JSlider) e.getSource();
+				valuetxt.setText(String.valueOf(source.getValue()));
+			}
+		};
+		Hashtable<Integer, Component> labeltbl = new Hashtable<Integer, COmponent>;
+		labeltbl.put(0,new JLabel("A"));
+		
+		slider = new JSlider(SwingConstants.HORIZONTAL,0,100,50);
+		slider.setPaintTicks(true);
+		slider.setMajorTickSpacing(20);
+		slider.setMinorTickSpacing(5);
+		slider.setPaintLabels(true);
+		slider.setSnapToTicks(true);
+		slider.setInverted(true);
+		slider.addChangeListener(listener);
+		add(slider);
+		add(valuetxt);
+		setVisible(true);
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		new JSliderDemo();
+		// TODO Auto-generated method stub
+
+	}
+
+}

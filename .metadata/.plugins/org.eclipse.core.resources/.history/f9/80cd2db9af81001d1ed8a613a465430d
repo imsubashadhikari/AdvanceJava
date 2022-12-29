@@ -1,0 +1,32 @@
+package LayoutManagement;
+
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+public class GridBagLayoutDemo extends JPanel {
+	JButton b1, b2, b3, b4, b5;
+	GridBagConstraints gbc;
+	
+	public GridBagLayoutDemo() {
+		setLayout(new GridBagLayout());
+		gbc = new GridBagConstraints();
+		b1 = new JButton("Button1");
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		add(b1,gbc); //button1 is added to JFrame in 0,0 position
+		
+		b2 = new JButton("Button2");
+		gbc.gridx = 1;
+		gbc.gridy = 1;
+		add(b2, gbc); // button2 is added to JFrame in 1, 1 position
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

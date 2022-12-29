@@ -1,0 +1,23 @@
+package choiceComponent;
+
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+
+public class JMenuDemo {
+	JMenuBar bar;
+	JMenu file,edit,view;
+	JMenuItem save, open, exit;
+	JCheckBoxMenuItem status;
+
+	public JMenuDemo() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,91 @@
+package choiceComponent;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JToolBar;
+
+public class ToolBarDemo extends JFrame{
+	JPanel panel;
+	JToolBar bar;
+	
+	public ToolBarDemo() {
+		setTitle("Toolbar Frame");
+		setSize(300,400);
+		
+		panel = new JPanel();
+		add(panel);
+		
+		//set action
+		Action runaction = new AbstractAction("Run", new ImageIcon(getClass().getResource("run.png"))) {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				panel.setBackground(Color.GREEN);
+			}
+		};
+		
+		
+Action openaction = new AbstractAction("Run", new ImageIcon(getClass().getResource("open.png"))) {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				panel.setBackground(Color.BLUE);
+			}
+		};
+		
+		
+Action arrowaction = new AbstractAction("Run", new ImageIcon(getClass().getResource("arrow.png"))) {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				panel.setBackground(Color.YELLOW);
+			}
+		};
+		
+Action folderaction = new AbstractAction("Run", new ImageIcon(getClass().getResource("folder.png"))) {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new JFileChooser();
+			}
+		};
+		
+		
+		
+Action closeaction = new AbstractAction("Run", new ImageIcon(getClass().getResource("close.png"))) {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		};
+		
+		
+		
+		
+		JToolBar bar = new JToolBar();
+		bar.add(runaction);
+		bar.add(openaction);
+		bar.add(arrowaction);
+		bar.add(closeaction);
+		bar.add(folderaction);
+		add(bar,BorderLayout.NORTH);//bar added to JFrame in north
+		
+		setVisible(true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
+	public static void main(String[] args) {
+		new ToolBarDemo();
+	}
+
+}
+

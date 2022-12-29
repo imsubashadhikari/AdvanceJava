@@ -1,0 +1,24 @@
+package TextComponentPackage;
+
+import javax.swing.*;
+
+public class TextComponents extends JFrame {
+	JLabel label;
+	JTextField text;
+	JTextArea area;
+	JPasswordField pass;
+	
+	public TextComponents() {
+		label = new JLabel();
+		text = new JTextField();
+		area = new JTextArea();
+		pass = new JPasswordField();
+	}
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
